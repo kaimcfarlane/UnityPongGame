@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BouncySurface : MonoBehaviour
+public class WallHit : MonoBehaviour
 {
-    public float bounceStrength;
     public AudioSource hitSound;
 
     public void OnCollisionEnter2D(Collision2D collision) {
         Ball ball = collision.gameObject.GetComponent<Ball>();
         if (ball != null) {
-            Vector2 normal = collision.GetContact(0).normal;
-            ball.AddForce(-normal * this.bounceStrength * 2);
             hitSound.Play();
         }
     }

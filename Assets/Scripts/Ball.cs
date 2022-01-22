@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     public float speed = 100.0f;
     private Rigidbody2D rigidbody;
+    public AudioSource startAudio;
     // Start is called before the first frame update
 
     private void Awake () {
@@ -15,6 +16,8 @@ public class Ball : MonoBehaviour
     private void Start() {
         ResetPosition();
         AddStartingForce();
+        startAudio.Play();
+
     }
 
     public void AddStartingForce() {

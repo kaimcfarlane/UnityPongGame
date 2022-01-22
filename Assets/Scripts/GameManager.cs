@@ -12,16 +12,20 @@ public class GameManager : MonoBehaviour
   public Text TextComputerScore;
   public Paddle playerPaddle;
   public Paddle ComputerPaddle;
+  public AudioSource playerScoreSound;
+  public AudioSource computerScoreSound;
 
 
 
   public void PlayerScores() {
+      playerScoreSound.Play();
       playerScore++;
       ResetRound();
       this.TextPlayerScore.text = playerScore.ToString();
     }
 
   public void ComputerScores() {
+      computerScoreSound.Play();
       computerScore++;
       ResetRound();
       this.TextComputerScore.text = computerScore.ToString();
