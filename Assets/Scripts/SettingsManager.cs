@@ -8,7 +8,7 @@ public class SettingsManager : MonoBehaviour
 {
 
      public string settingsMenu;
-     private Color defaultColor = new Color(20f/255f, 255f/255f, 186f/255f, 0f/255f);
+     private Color defaultColor = new Color(77f/255f, 211f/255f, 243f/255f, 0f/255f);
      public static Color SMcolor = new Color(77f/255f, 211f/255f, 243f/255f, 0f/255f);
      public string mainMenu;
      public Camera cm;
