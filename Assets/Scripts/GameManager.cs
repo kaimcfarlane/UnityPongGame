@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
   public AudioSource playerScoreSound;
   public AudioSource computerScoreSound;
 
-
-
   public void PlayerScores() {
       playerScoreSound.Play();
       playerScore++;
